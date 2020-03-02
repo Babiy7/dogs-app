@@ -1,1 +1,9 @@
-
+.Прямоугольник__скругл__углы_3 {
+  background-color: rgb(241, 205, 179);
+  position: absolute;
+  left: 1231px;
+  top: 98px;
+  width: 57px;
+  height: 3px;
+  z-index: 181;
+}
