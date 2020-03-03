@@ -1,15 +1,16 @@
+@import "../../../sass/vars.scss";
+
 .Intro {
   height: 920px;
 
   display: flex;
   align-items: flex-end;
 
-  background: linear-gradient(-45deg, #1b1b1d, #453931);
+  background: linear-gradient(-45deg, #1b1b1d, #1b1b1d, #453931, #453931);
 
   overflow: hidden;
 
   .Container {
-    border: red solid;
     width: 100%;
     max-width: 1175px;
     height: 560px;
@@ -21,10 +22,25 @@
       width: 50%;
 
       .Title {
+        width: 350px;
+
+        color: #fffbf8;
+
+        text-align: left;
+        font-size: 44px;
         font-family: "Poppins", sans-serif;
       }
 
       .Text {
+        width: 444px;
+
+        margin-top: 45px;
+
+        color: $gray-light;
+
+        text-align: left;
+        line-height: 20px;
+        font-size: 15px;
         font-family: "Lato", serif;
       }
     }
