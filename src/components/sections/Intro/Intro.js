@@ -1,19 +1,26 @@
 import React from "react";
 import classes from "./Intro.module.scss";
 
-import dog from "../../../assests/image/logo512.png";
+import dog from "../../../assests/images/dog.png";
 
 const Intro = () => {
   return (
     <div className={classes.Intro}>
       <div className={classes.Container}>
         <div className={classes.Left}>
-          <div className={classes.Title}></div>
-          <div className={classes.Text}></div>
+          <h2 className={classes.Title}>Not only people need a house</h2>
+          <div className={classes.Text}>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+              aut neque reiciendis illum, quo saepe numquam. Repudiandae, beatae
+              nemo. Enim suscipit quod, possimus consequatur ea mollitia quaerat
+              et unde fuga.
+            </p>
+          </div>
+          <div className={classes.ButtonContainer}></div>
         </div>
-
         <div className={classes.Right}>
-          <img src={dog} alt="dog" />
+          <img className={classes.Image} src={dog} alt="" />
         </div>
       </div>
     </div>

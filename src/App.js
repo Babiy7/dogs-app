@@ -1,11 +1,12 @@
 import React from "react";
-import "./App.css";
+import dog from "./assests/images/dog.png";
+import classes from "./App.module.scss";
 
-import Intro from "./components/sections/Intro/Intro";
+import Intro from "./components/Sections/Intro/Intro";
 
 function App() {
   return (
-    <div className="App">
+    <div className={classes.App}>
       <Intro />
     </div>
   );

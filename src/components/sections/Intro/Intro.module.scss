@@ -1,8 +1,38 @@
-@import "../../../sass/vars.scss";
-
 .Intro {
   height: 920px;
 
-  background: linear-gradient(-45deg, black, $background);
-  background-size: 100% 100%;
+  display: flex;
+  align-items: flex-end;
+
+  background: linear-gradient(-45deg, #1b1b1d, #453931);
+
+  overflow: hidden;
+
+  .Container {
+    border: red solid;
+    width: 100%;
+    max-width: 1175px;
+    height: 560px;
+
+    display: flex;
+    margin: 0 auto;
+
+    .Left {
+      width: 50%;
+    }
+
+    .Right {
+      width: calc(100% / 2);
+
+      position: relative;
+
+      .Image {
+        height: 1800px;
+
+        position: absolute;
+        top: -380px;
+        right: -420px;
+      }
+    }
+  }
 }
