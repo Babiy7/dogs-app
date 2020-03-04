@@ -1,0 +1,21 @@
+@import "../../../sass/vars";
+
+.Button {
+  padding: 0.8em 2.7em;
+  outline: none;
+  border: 1px solid $orange-light;
+  border-radius: 35px;
+
+  color: $black;
+  background: $orange-light;
+
+  font-size: 1.06rem;
+  font-family: "Poppins", sans-serif;
+
+  cursor: pointer;
+
+  &:hover {
+    background: none;
+    color: $orange-light;
+  }
+}

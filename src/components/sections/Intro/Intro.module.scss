@@ -12,6 +12,7 @@
   background: linear-gradient(-45deg, #1b1b1d, #1b1b1d, #453931, #453931);
 
   overflow: hidden;
+  z-index: -1;
 
   &::before {
     content: "";
@@ -26,7 +27,7 @@
     background: url("../../../assests/images/wood-background.jpg");
 
     opacity: 0.1;
-    z-index: 0;
+    z-index: -2;
   }
 
   .Container {
@@ -53,9 +54,15 @@
       .Text {
         width: 444px;
 
-        margin-top: 45px;
+        margin-top: 35px;
 
         @extend %text;
+      }
+
+      .ButtonContainer {
+        margin-top: 45px;
+
+        float: left;
       }
     }
 
@@ -70,6 +77,8 @@
         position: absolute;
         top: -380px;
         right: -420px;
+
+        z-index: -1;
       }
     }
   }

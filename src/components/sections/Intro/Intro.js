@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Intro.module.scss";
 
+import Button from "../../UI/Button/Button";
 import dog from "../../../assests/images/dog.png";
 
 const Intro = () => {
@@ -17,7 +18,9 @@ const Intro = () => {
               et unde fuga.
             </p>
           </div>
-          <div className={classes.ButtonContainer}></div>
+          <div className={classes.ButtonContainer}>
+            <Button>Make a friend</Button>
+          </div>
         </div>
         <div className={classes.Right}>
           <img className={classes.Image} src={dog} alt="" />
