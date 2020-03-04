@@ -6,6 +6,8 @@
   top: 50px;
   left: 0;
 
+  padding: 0 20px;
+
   box-sizing: border-box;
 
   .Container {
@@ -15,6 +17,7 @@
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
 
     box-sizing: border-box;

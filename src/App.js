@@ -9,6 +9,7 @@ function App() {
     <div className={classes.App}>
       <Header />
       <Intro />
+      <button className={classes.Button}>My button</button>
     </div>
   );
 }
