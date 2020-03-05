@@ -1,5 +1,6 @@
 @import "../../../sass/vars";
 @import "../../../sass/text";
+@import "../../../sass/functions";
 
 .Intro {
   height: 920px;
@@ -39,6 +40,26 @@
     }
   }
 
+  @media ($tablet) {
+    height: 620px;
+
+    &::before {
+      height: 620px;
+    }
+  }
+
+  @media ($mobile-L) {
+    height: 600px;
+
+    padding: 0 10px;
+    padding-top: 50px;
+    align-items: flex-start;
+
+    &::before {
+      height: 600px;
+    }
+  }
+
   .Container {
     width: 100%;
     max-width: 1175px;
@@ -47,11 +68,25 @@
     display: flex;
     margin: 0 auto;
 
+    @media ($mobile-L) {
+      flex-direction: column;
+    }
+
     .Left {
-      width: 50%;
+      width: 40%;
 
       @media ($laptop-L) {
         padding-top: 100px;
+      }
+
+      @media ($tablet) {
+        padding-top: 150px;
+      }
+
+      @media ($mobile-L) {
+        width: 100%;
+
+        text-align: center;
       }
 
       .Title {
@@ -60,27 +95,62 @@
         color: #fffbf8;
 
         text-align: left;
-        font-size: 44px;
+        font-size: calcFluidFontSize(25, 44);
         font-family: "Poppins", sans-serif;
+
+        @media ($laptop-L) {
+          width: 300px;
+        }
+
+        @media ($tablet) {
+          width: 250px;
+        }
+
+        @media ($mobile-L) {
+          width: 100%;
+
+          text-align: center;
+        }
       }
 
       .Text {
         width: 444px;
 
-        margin-top: 35px;
+        margin-top: 45px;
 
         @extend %text;
+
+        @media ($tablet) {
+          width: 300px;
+        }
+
+        @media ($mobile-L) {
+          width: 100%;
+
+          margin-top: 15px;
+
+          text-align: center;
+          line-height: 15px;
+        }
       }
 
       .ButtonContainer {
         margin-top: 45px;
 
         float: left;
+
+        @media ($mobile-L) {
+          width: 100%;
+
+          margin-top: 20px;
+
+          text-align: center;
+        }
       }
     }
 
     .Right {
-      width: calc(100% / 2);
+      width: 60%;
 
       position: relative;
 
@@ -105,6 +175,20 @@
 
           top: -80px;
           right: -140px;
+        }
+
+        @media ($tablet) {
+          height: 1000px;
+
+          top: 20px;
+          right: -150px;
+        }
+
+        @media ($mobile-L) {
+          height: 600px;
+
+          top: -40px;
+          right: -200px;
         }
       }
     }

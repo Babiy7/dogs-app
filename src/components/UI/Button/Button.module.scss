@@ -1,4 +1,5 @@
 @import "../../../sass/vars";
+@import "../../../sass/functions";
 
 .Button {
   padding: 0.8em 2.7em;
@@ -9,8 +10,9 @@
   color: $black;
   background: $orange-light;
 
-  font-size: 1.06rem;
+  font-size: calcFluidFontSize(12, 17);
   font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
 
   transition: all 0.2s linear;
   cursor: pointer;

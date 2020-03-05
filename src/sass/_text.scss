@@ -1,8 +1,10 @@
+@import "./functions";
+
 %text {
   color: $gray-light;
 
   text-align: left;
   line-height: 20px;
-  font-size: 15px;
+  font-size: calcFluidFontSize(10, 15);
   font-family: "Lato", serif;
 }
