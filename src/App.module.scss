@@ -1,0 +1,53 @@
+.App {
+  height: 100vh;
+
+  position: relative;
+
+  text-align: center;
+
+  z-index: -100;
+
+  .Button {
+    position: relative;
+
+    margin: 300px 0;
+    padding: 10px 20px;
+    outline: none;
+    border: 2px solid #f2594e;
+    border-radius: 25px;
+
+    background: none;
+    color: white;
+
+    font-size: 20px;
+
+    transition: all 0.4s linear;
+    overflow: hidden;
+
+    &:hover {
+      color: #f2594e;
+    }
+
+    &::before {
+      content: "";
+
+      width: 160%;
+      height: 140%;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      border-radius: 0% 50% 50% 0%;
+
+      background: #f2594e;
+
+      z-index: -1;
+      transition: all 0.4s linear;
+    }
+
+    &:hover::before {
+      width: 0%;
+    }
+  }
+}

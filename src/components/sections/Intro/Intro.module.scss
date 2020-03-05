@@ -1,0 +1,196 @@
+@import "../../../sass/vars";
+@import "../../../sass/text";
+@import "../../../sass/functions";
+
+.Intro {
+  height: 920px;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 0 20px;
+
+  background: linear-gradient(-45deg, #1b1b1d, #1b1b1d, #453931, #453931);
+
+  overflow: hidden;
+  z-index: -1;
+
+  &::before {
+    content: "";
+
+    width: 100%;
+    height: 920px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: url("../../../assests/images/wood-background.jpg");
+
+    opacity: 0.1;
+    z-index: -2;
+  }
+
+  @media ($laptop-L) {
+    height: 750px;
+
+    &::before {
+      height: 750px;
+    }
+  }
+
+  @media ($tablet) {
+    height: 620px;
+
+    &::before {
+      height: 620px;
+    }
+  }
+
+  @media ($mobile-L) {
+    height: 600px;
+
+    padding: 0 10px;
+    padding-top: 50px;
+    align-items: flex-start;
+
+    &::before {
+      height: 600px;
+    }
+  }
+
+  .Container {
+    width: 100%;
+    max-width: 1175px;
+    height: 560px;
+
+    display: flex;
+    margin: 0 auto;
+
+    @media ($mobile-L) {
+      flex-direction: column;
+    }
+
+    .Left {
+      width: 40%;
+
+      @media ($laptop-L) {
+        padding-top: 100px;
+      }
+
+      @media ($tablet) {
+        padding-top: 150px;
+      }
+
+      @media ($mobile-L) {
+        width: 100%;
+
+        text-align: center;
+      }
+
+      .Title {
+        width: 350px;
+
+        color: #fffbf8;
+
+        text-align: left;
+        font-size: calcFluidFontSize(25, 44);
+        font-family: "Poppins", sans-serif;
+
+        @media ($laptop-L) {
+          width: 300px;
+        }
+
+        @media ($tablet) {
+          width: 250px;
+        }
+
+        @media ($mobile-L) {
+          width: 100%;
+
+          text-align: center;
+        }
+      }
+
+      .Text {
+        width: 444px;
+
+        margin-top: 45px;
+
+        @extend %text;
+
+        @media ($tablet) {
+          width: 300px;
+        }
+
+        @media ($mobile-L) {
+          width: 100%;
+
+          margin-top: 15px;
+
+          text-align: center;
+          line-height: 15px;
+        }
+      }
+
+      .ButtonContainer {
+        margin-top: 45px;
+
+        float: left;
+
+        @media ($mobile-L) {
+          width: 100%;
+
+          margin-top: 20px;
+
+          text-align: center;
+        }
+      }
+    }
+
+    .Right {
+      width: 60%;
+
+      position: relative;
+
+      .Image {
+        height: 1800px;
+
+        position: absolute;
+        top: -380px;
+        right: -420px;
+
+        z-index: -1;
+
+        @media ($laptop-L) {
+          height: 1400px;
+
+          top: -180px;
+          right: -190px;
+        }
+
+        @media ($laptop) {
+          height: 1200px;
+
+          top: -80px;
+          right: -140px;
+        }
+
+        @media ($tablet) {
+          height: 1000px;
+
+          top: 20px;
+          right: -150px;
+        }
+
+        @media ($mobile-L) {
+          height: 600px;
+
+          top: -40px;
+          right: -200px;
+        }
+      }
+    }
+  }
+}

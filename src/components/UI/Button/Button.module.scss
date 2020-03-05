@@ -1,0 +1,24 @@
+@import "../../../sass/vars";
+@import "../../../sass/functions";
+
+.Button {
+  padding: 0.8em 2.7em;
+  outline: none;
+  border: 1px solid $orange-light;
+  border-radius: 35px;
+
+  color: $black;
+  background: $orange-light;
+
+  font-size: calcFluidFontSize(12, 17);
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &:hover {
+    background: none;
+    color: $orange-light;
+  }
+}
