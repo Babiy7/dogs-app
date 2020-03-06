@@ -3,6 +3,7 @@ import classes from "./Header.module.scss";
 
 import Logo from "../../UI/Logo/Logo";
 import Links from "../../UI/NavLinks/NavLinks";
+import BurgerButton from "../../UI/BurgerButton/BurgerButton";
 
 const Header = props => {
   return (
@@ -14,11 +15,7 @@ const Header = props => {
           <Links />
         </nav>
 
-        <div className={classes.BurgerButton}>
-          {[1, 2, 3].map(_ => (
-            <div className={classes.Line} />
-          ))}
-        </div>
+        <BurgerButton />
       </div>
     </div>
   );

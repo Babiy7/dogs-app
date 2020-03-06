@@ -1,0 +1,48 @@
+@import "../../../sass/vars";
+
+.BurgerButton {
+  width: 45px;
+  height: 45px;
+
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px;
+  border-radius: 50%;
+
+  transition: all 0.3s linear;
+
+  @media ($mobile-L) {
+    display: flex;
+  }
+
+  @media ($mobile-L-h) and ($mobile-L-land) {
+    display: flex;
+  }
+
+  @media ($mobile-M-h) and ($mobile-M-land-X) {
+    display: flex;
+  }
+
+  &:hover {
+    background: rgba($white, 0.2);
+
+    .Line {
+      background: rgba($black, 1);
+    }
+  }
+
+  .Line {
+    width: 100%;
+    height: 3px;
+
+    margin-bottom: 10px;
+
+    background: $white;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
