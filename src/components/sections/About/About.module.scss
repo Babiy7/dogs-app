@@ -1,0 +1,48 @@
+@import "../../../sass/text";
+@import "../../../sass/vars";
+@import "../../../sass/title";
+
+.About {
+  border: red solid;
+  height: 580px;
+
+  display: flex;
+  padding: 0 20px;
+
+  .Container {
+    border: red solid;
+
+    width: 100%;
+    max-width: 830px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+
+    .ImageContainer {
+      border: red solid;
+    }
+
+    .Content {
+      border: green solid;
+      width: 50%;
+
+      text-align: left;
+
+      .Title {
+        width: 300px;
+
+        margin-bottom: 35px;
+
+        @extend %title;
+      }
+
+      .Text {
+        color: $gray;
+
+        @extend %text;
+      }
+    }
+  }
+}
