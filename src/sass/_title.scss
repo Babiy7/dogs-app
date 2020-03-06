@@ -1,0 +1,9 @@
+@import "./vars";
+@import "./functions";
+
+%title {
+  color: $gray;
+
+  font-size: calcFluidFontSize(25, 35);
+  line-height: 1.3em;
+}
