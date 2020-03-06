@@ -3,15 +3,22 @@
 @import "../../../sass/title";
 
 .About {
-  border: red solid;
   height: 580px;
 
   display: flex;
   padding: 0 20px;
 
-  .Container {
-    border: red solid;
+  @media ($mobile-L) {
+    height: 700px;
 
+    padding: 30px 20px;
+  }
+
+  @media ($mobile-S) {
+    height: 600px;
+  }
+
+  .Container {
     width: 100%;
     max-width: 830px;
 
@@ -20,15 +27,34 @@
     justify-content: space-between;
     margin: auto;
 
+    @media ($mobile-L) {
+      height: 100%;
+
+      flex-direction: column-reverse;
+    }
+
     .ImageContainer {
-      border: red solid;
+      @media ($mobile-L) {
+        width: 100%;
+      }
+
+      .Image {
+        @media ($mobile-L) {
+          width: 80%;
+        }
+      }
     }
 
     .Content {
-      border: green solid;
       width: 50%;
 
       text-align: left;
+
+      @media ($mobile-L) {
+        width: 100%;
+
+        text-align: center;
+      }
 
       .Title {
         width: 300px;
@@ -36,12 +62,20 @@
         margin-bottom: 35px;
 
         @extend %title;
+
+        @media ($mobile-L) {
+          width: 100%;
+        }
       }
 
       .Text {
         color: $gray;
 
         @extend %text;
+
+        @media ($mobile-L) {
+          text-align: center;
+        }
       }
     }
   }
