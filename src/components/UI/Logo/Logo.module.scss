@@ -1,4 +1,5 @@
 @import "../../../sass/vars";
+@import "../../../sass/functions";
 
 .Logo {
   display: inline-block;
@@ -9,7 +10,7 @@
 
     color: $orange-light;
 
-    font-size: 27px;
+    font-size: calcFluidFontSize(20, 27);
   }
 
   .Subtitle {
@@ -18,6 +19,10 @@
     color: $white;
 
     font-family: "Lato", sans-serif;
-    font-size: 13.5px;
+    font-size: calcFluidFontSize(10, 13.5);
+
+    @media ($mobile-L) {
+      margin-top: 0;
+    }
   }
 }

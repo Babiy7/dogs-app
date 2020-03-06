@@ -1,29 +1,8 @@
 @import "../../../../sass/vars";
+@import "../../../../sass/nav_link";
 
 .Link {
-  position: relative;
-
-  margin-left: 38px;
-
-  color: $white;
-
-  font-size: 15px;
-  text-decoration: none;
-
-  &:before {
-    content: "";
-
-    width: 0%;
-    height: 3px;
-
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-
-    background: $orange-light;
-
-    transition: all 0.2s linear;
-  }
+  @extend %nav_link;
 
   &:hover::before {
     width: 100%;
@@ -31,27 +10,9 @@
 }
 
 .ActiveLink {
-  position: relative;
-
-  margin-left: 38px;
-
-  color: $white;
-
-  font-size: 15px;
-  text-decoration: none;
+  @extend %nav_link;
 
   &:before {
-    content: "";
-
     width: 100%;
-    height: 3px;
-
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-
-    display: block;
-
-    background: $orange-light;
   }
 }

@@ -9,9 +9,16 @@ const Header = props => {
     <div className={classes.Header}>
       <div className={classes.Container}>
         <Logo />
-        <nav>
+
+        <nav className={classes.Navigation}>
           <Links />
         </nav>
+
+        <div className={classes.BurgerButton}>
+          {[1, 2, 3].map(_ => (
+            <div className={classes.Line} />
+          ))}
+        </div>
       </div>
     </div>
   );

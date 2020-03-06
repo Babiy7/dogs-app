@@ -14,7 +14,7 @@
   background: linear-gradient(-45deg, #1b1b1d, #1b1b1d, #453931, #453931);
 
   overflow: hidden;
-  z-index: -1;
+  z-index: 1;
 
   &::before {
     content: "";
@@ -29,7 +29,6 @@
     background: url("../../../assests/images/wood-background.jpg");
 
     opacity: 0.1;
-    z-index: -2;
   }
 
   @media ($laptop-L) {
@@ -41,22 +40,46 @@
   }
 
   @media ($tablet) {
-    height: 620px;
+    height: 600px;
 
     &::before {
-      height: 620px;
+      height: 600px;
     }
   }
 
   @media ($mobile-L) {
-    height: 600px;
+    height: 550px;
 
     padding: 0 10px;
     padding-top: 50px;
     align-items: flex-start;
 
     &::before {
-      height: 600px;
+      height: 550px;
+    }
+  }
+
+  @media ($mobile-M-h) and ($mobile-M-land) {
+    height: 520px;
+
+    &::before {
+      height: 520px;
+    }
+  }
+
+  @media ($mobile-M-h) and ($mobile-M-land-X) {
+    height: 550px;
+
+    &::before {
+      height: 550px;
+    }
+  }
+
+  @media ($mobile-S-h) and ($mobile-S-land) {
+    height: 500px;
+
+    &::before {
+      height: 500px;
     }
   }
 
@@ -67,6 +90,8 @@
 
     display: flex;
     margin: 0 auto;
+
+    z-index: 3;
 
     @media ($mobile-L) {
       flex-direction: column;
@@ -84,9 +109,20 @@
       }
 
       @media ($mobile-L) {
-        width: 100%;
+        width: 90%;
+
+        padding-top: 80px;
+        margin: 0 auto;
 
         text-align: center;
+      }
+
+      @media ($mobile-M-h) and ($mobile-M-land) {
+        padding-top: 200px;
+      }
+
+      @media ($mobile-M-h) and ($mobile-M-land-X) {
+        padding-top: 200px;
       }
 
       .Title {
@@ -130,7 +166,15 @@
           margin-top: 15px;
 
           text-align: center;
-          line-height: 15px;
+          line-height: 20px;
+        }
+
+        @media ($mobile-M-h) and ($mobile-M-land-X) {
+          width: 344px;
+        }
+
+        @media ($mobile-M-h) and ($mobile-M-land) {
+          width: 304px;
         }
       }
 
@@ -189,6 +233,27 @@
 
           top: -40px;
           right: -200px;
+        }
+
+        @media ($mobile-M-h) and ($mobile-M-land) {
+          height: 850px;
+
+          top: 120px;
+          right: -160px;
+        }
+
+        @media ($mobile-M-h) and ($mobile-M-land-X) {
+          height: 950px;
+
+          top: 80px;
+          right: -160px;
+        }
+
+        @media ($mobile-S-h) and ($mobile-S-land) {
+          height: 750px;
+
+          top: 160px;
+          right: -140px;
         }
       }
     }
