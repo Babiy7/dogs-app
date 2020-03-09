@@ -9,6 +9,10 @@ const Button = props => {
       button = classes.Button;
       break;
     }
+    case "main": {
+      button = [classes.Button, classes.Main].join(" ");
+      break;
+    }
     default: {
       button = classes.Button;
     }

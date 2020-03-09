@@ -21,3 +21,12 @@
     color: $orange-light;
   }
 }
+
+.Main {
+  border: 2px solid $orange-light;
+
+  &:hover {
+    background: none;
+    color: $black;
+  }
+}
