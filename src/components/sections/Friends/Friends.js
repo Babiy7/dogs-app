@@ -1,6 +1,7 @@
 import React from "react";
 import classes from "./Friends.module.scss";
 
+import Portfolio from "../../Portfolio/Portfolio";
 import Button from "../../UI/Button/Button";
 
 const Friends = props => {
@@ -10,7 +11,9 @@ const Friends = props => {
         <h4 className={classes.Title}>
           Our friends who <br /> are looking for a house
         </h4>
-        <div className={classes.Content}></div>
+        <div className={classes.Content}>
+          <Portfolio />
+        </div>
         <div className={classes.ButtonContainer}>
           <Button type="main">Get to know the rest</Button>
         </div>
