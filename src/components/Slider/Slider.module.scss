@@ -1,0 +1,37 @@
+.Slider {
+  height: 100%;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  .Slide {
+    min-width: 390px;
+
+    display: flex;
+    justify-content: center;
+
+    transition: all 0.2s linear;
+    box-sizing: border-box;
+  }
+
+  .Left {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+
+    transform: translateY(-50%);
+  }
+
+  .Right {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+
+    transform: translateY(-50%);
+  }
+}

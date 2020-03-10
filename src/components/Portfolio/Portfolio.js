@@ -6,9 +6,14 @@ import dog2 from "../../assests/pets/dog2.png";
 
 import Button from "../UI/Button/Button";
 
-const Portfolio = () => {
+const Portfolio = props => {
+  console.log(props);
   return (
-    <div className={classes.Portfolio}>
+    <div
+      className={[classes.Portfolio, props.shadow ? classes.Shadow : ""].join(
+        " "
+      )}
+    >
       <div className={classes.ImageContainer}>
         <img className={classes.Image} src={dog2} alt="pet" />
       </div>

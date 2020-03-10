@@ -7,6 +7,7 @@ import dog3 from "../../../assests/pets/dog3.png";
 
 import Portfolio from "../../Portfolio/Portfolio";
 import Button from "../../UI/Button/Button";
+import Slider from "../../Slider/Slider";
 
 const Friends = props => {
   return (
@@ -15,7 +16,9 @@ const Friends = props => {
         <h4 className={classes.Title}>
           Our friends who <br /> are looking for a house
         </h4>
-        <div className={classes.Content}></div>
+        <div className={classes.Content}>
+          <Slider />
+        </div>
         <div className={classes.ButtonContainer}>
           <Button type="main">Get to know the rest</Button>
         </div>

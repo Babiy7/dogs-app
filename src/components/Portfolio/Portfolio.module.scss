@@ -27,3 +27,11 @@
     box-shadow: 1px 1px 30px 5px rgba(black, 0.1);
   }
 }
+
+.Shadow {
+  box-shadow: 1px 1px 30px 5px rgba(black, 0.1);
+
+  &:hover {
+    box-shadow: 2px 2px 40px 10px rgba(black, 0.3);
+  }
+}
