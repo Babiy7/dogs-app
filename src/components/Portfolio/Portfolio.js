@@ -1,13 +1,9 @@
 import React from "react";
 import classes from "./Portfolio.module.scss";
 
-import dog from "../../assests/pets/dog1.png";
-import dog2 from "../../assests/pets/dog2.png";
-
 import Button from "../UI/Button/Button";
 
 const Portfolio = props => {
-  console.log(props);
   return (
     <div
       className={[classes.Portfolio, props.shadow ? classes.Shadow : ""].join(
@@ -15,10 +11,10 @@ const Portfolio = props => {
       )}
     >
       <div className={classes.ImageContainer}>
-        <img className={classes.Image} src={dog2} alt="pet" />
+        <img className={classes.Image} src={props.image} alt="pet" />
       </div>
       <div className={classes.Content}>
-        <h4 className={classes.Title}>Jennifer</h4>
+        <h4 className={classes.Title}>{props.name}</h4>
         <div className={classes.ButtonContainer}>
           <Button type="main">Learn More</Button>
         </div>
