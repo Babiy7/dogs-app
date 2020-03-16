@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import classes from "./Slider.module.scss";
 
 import Portfolio from "../Portfolio/Portfolio";
+import Button from "../UI/Button/Button";
 import dog1 from "../../assests/pets/dog1.png";
 import dog2 from "../../assests/pets/dog2.png";
 import dog3 from "../../assests/pets/dog3.png";
@@ -23,7 +24,6 @@ const pets = [
 ];
 
 const Slider = () => {
-  const slides = [1, 2, 3, 4, 5];
   const [x, setX] = useState(0);
   const [center, setCenter] = useState(1);
 
@@ -51,30 +51,32 @@ const Slider = () => {
 
   return (
     <div className={classes.Slider}>
-      {pets.map((pet, index) => (
-        <div
-          className={classes.Slide}
-          key={index}
-          style={{
-            transform: `translateX(${x}px)`,
-            height: index === center ? "485px" : "445px"
-          }}
-        >
-          <Portfolio
-            image={pet.img}
-            name={pet.name}
-            shadow={index === center ? true : false}
-          />
-        </div>
-      ))}
+      <div className={classes.Container}>
+        {pets.map((pet, index) => (
+          <div
+            className={classes.Slide}
+            key={index}
+            style={{
+              transform: `translateX(${x}px)`,
+              height: index === center ? "485px" : "445px"
+            }}
+          >
+            <Portfolio
+              image={pet.img}
+              name={pet.name}
+              shadow={index === center ? true : false}
+            />
+          </div>
+        ))}
+      </div>
 
-      <button className={classes.Left} onClick={() => goLeft()}>
-        left
-      </button>
+      <div className={classes.Left}>
+        <Button type="previous" clicked={() => goLeft()} />
+      </div>
 
-      <button className={classes.Right} onClick={() => goRight()}>
-        right
-      </button>
+      <div className={classes.Right}>
+        <Button type="next" clicked={() => goRight()} />
+      </div>
     </div>
   );
 };
