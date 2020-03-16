@@ -27,7 +27,9 @@ const Slider = () => {
   const [x, setX] = useState(0);
   const [center, setCenter] = useState(1);
 
-  console.log(center);
+  window.onresize = function(e) {
+    console.log(e);
+  };
 
   const goLeft = () => {
     if (0 === x) {
