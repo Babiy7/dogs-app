@@ -57,8 +57,7 @@ const Slider = () => {
             className={classes.Slide}
             key={index}
             style={{
-              transform: `translateX(${x}px)`,
-              height: index === center ? "485px" : "445px"
+              transform: `translateX(${x}px)`
             }}
           >
             <Portfolio

@@ -6,15 +6,15 @@ import Button from "../UI/Button/Button";
 const Portfolio = props => {
   return (
     <div
-      className={[classes.Portfolio, props.shadow ? classes.Shadow : ""].join(
+      className={[classes.Portfolio, props.shadow ? classes.Center : ""].join(
         " "
       )}
     >
-      <div className={classes.ImageContainer}>
-        <img className={classes.Image} src={props.image} alt="pet" />
-      </div>
+      <img className={classes.Image} src={props.image} alt="pet" />
+
       <div className={classes.Content}>
         <h4 className={classes.Title}>{props.name}</h4>
+
         <div className={classes.ButtonContainer}>
           <Button type="main">Learn More</Button>
         </div>

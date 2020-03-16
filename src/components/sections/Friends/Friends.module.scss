@@ -9,6 +9,10 @@
 
   background: $white;
 
+  @media ($laptop-L) {
+    height: 730px;
+  }
+
   .Container {
     width: 100%;
 
@@ -24,6 +28,7 @@
     }
 
     .Content {
+      border: red solid;
       width: 100%;
       height: 555px;
 
