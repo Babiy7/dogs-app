@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Slider.module.scss";
 
 import Portfolio from "../Portfolio/Portfolio";
@@ -26,50 +26,49 @@ const pets = [
 const Slider = () => {
   const [x, setX] = useState(0);
   const [center, setCenter] = useState(1);
+  // eslint-disable-next-line
+  const [size, setSize] = useState(390);
 
-  window.onresize = function(e) {
-    console.log(e);
+  const setLocation = (x, center) => {
+    setX(x);
+    setCenter(center);
   };
 
   const goLeft = () => {
     if (0 === x) {
-      setX(-390 * (pets.length - 3));
-      setCenter(pets.length - 2);
+      setLocation(-size * (pets.length - 3), pets.length - 2);
     } else {
-      setX(x + 390);
-      setCenter(center - 1);
+      setLocation(x + size, center - 1);
     }
   };
 
   const goRight = () => {
-    if (-390 * (pets.length - 3) === x) {
-      setX(0);
-      setCenter(1);
+    if (-size * (pets.length - 3) === x) {
+      setLocation(0, 1);
     } else {
-      setX(x - 390);
-      setCenter(center + 1);
+      setLocation(x - size, center + 1);
     }
   };
 
+  const slides = pets.map((pet, index) => (
+    <div
+      className={classes.Slide}
+      key={index}
+      style={{
+        transform: `translateX(${x}px)`
+      }}
+    >
+      <Portfolio
+        image={pet.img}
+        name={pet.name}
+        shadow={index === center ? true : false}
+      />
+    </div>
+  ));
+
   return (
     <div className={classes.Slider}>
-      <div className={classes.Container}>
-        {pets.map((pet, index) => (
-          <div
-            className={classes.Slide}
-            key={index}
-            style={{
-              transform: `translateX(${x}px)`
-            }}
-          >
-            <Portfolio
-              image={pet.img}
-              name={pet.name}
-              shadow={index === center ? true : false}
-            />
-          </div>
-        ))}
-      </div>
+      <div className={classes.Container}>{slides}</div>
 
       <div className={classes.Left}>
         <Button type="previous" clicked={() => goLeft()} />
