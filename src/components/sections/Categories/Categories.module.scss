@@ -1,0 +1,55 @@
+@import "../../../sass/title";
+
+.Categories {
+  border: black solid;
+
+  display: flex;
+  padding: 70px 0;
+
+  @media ($tablet) {
+    padding: 40px 0;
+  }
+
+  .Container {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: auto;
+
+    .Title {
+      margin-bottom: 80px;
+
+      @extend %title;
+
+      @media ($laptop-L) {
+        margin-bottom: 50px;
+      }
+
+      @media ($tablet) {
+        margin-bottom: 30px;
+      }
+    }
+
+    .CategoriesContainer {
+      border: green solid;
+      height: 300px;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: space-between;
+
+      @media ($tablet) {
+        height: 400px;
+      }
+
+      @media ($mobile-L) {
+        height: auto;
+      }
+
+      @media ($mobile-M-h) and ($mobile-M-land-X) {
+        height: auto;
+      }
+    }
+  }
+}
