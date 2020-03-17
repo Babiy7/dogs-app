@@ -1,8 +1,6 @@
 @import "../../../sass/title";
 
 .Categories {
-  border: black solid;
-
   display: flex;
   padding: 70px 0;
 
@@ -31,7 +29,6 @@
     }
 
     .CategoriesContainer {
-      border: green solid;
       height: 300px;
 
       display: flex;
