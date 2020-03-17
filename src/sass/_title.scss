@@ -4,6 +4,10 @@
 %title {
   color: $gray;
 
-  font-size: calcFluidFontSize(25, 35);
+  font-size: 35px;
   line-height: 1.3em;
+
+  @media ($laptop-L) {
+    font-size: 25px;
+  }
 }
