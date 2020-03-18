@@ -20,6 +20,11 @@
     align-items: flex-end;
     margin: auto;
 
+    @media ($mobile-L) {
+      flex-direction: column;
+      align-items: center;
+    }
+
     .ImageContainer {
       width: 100%;
       max-width: 580px;
@@ -32,12 +37,21 @@
         margin-right: 40px;
       }
 
+      @media ($mobile-L) {
+        border: green solid;
+        margin-right: 0px;
+      }
+
       .Image {
         width: 100%;
 
         position: absolute;
         bottom: -2px;
         left: 0;
+
+        @media ($mobile-L) {
+          position: unset;
+        }
       }
     }
 
@@ -49,6 +63,19 @@
 
       @media ($tablet) {
         max-width: 270px;
+      }
+
+      @media ($mobile-L) {
+        border: black solid;
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        margin-top: 30px;
+
+        text-align: center;
       }
 
       .Title {
