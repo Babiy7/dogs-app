@@ -8,6 +8,10 @@
   display: flex;
   padding: 80px 20px;
 
+  @media ($tablet) {
+    padding: 40px 20px;
+  }
+
   .Container {
     width: 100%;
     max-width: 1040px;
@@ -24,6 +28,10 @@
 
       margin-right: 70px;
 
+      @media ($tablet) {
+        margin-right: 40px;
+      }
+
       .Image {
         width: 100%;
 
@@ -39,10 +47,18 @@
 
       text-align: left;
 
+      @media ($tablet) {
+        max-width: 270px;
+      }
+
       .Title {
         margin-bottom: 30px;
 
         @extend %title;
+
+        @media ($tablet) {
+          margin-bottom: 20px;
+        }
       }
 
       .CreditCardContainer {
@@ -74,6 +90,10 @@
             width: 225px;
 
             padding: 10px;
+          }
+
+          @media ($tablet) {
+            margin-bottom: 20px;
           }
 
           .ImageCard {
