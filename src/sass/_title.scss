@@ -12,6 +12,6 @@
   }
 
   @media ($mobile-L) {
-    font-size: 22px;
+    font-size: calcFluidFontSize(20, 22);
   }
 }
