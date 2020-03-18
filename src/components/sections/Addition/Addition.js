@@ -9,12 +9,12 @@ const Addition = () => {
     <div className={classes.Addition}>
       <div className={classes.Container}>
         <div className={classes.ImageContainer}>
-          <img src={dog} alt="" />
+          <img className={classes.Image} src={dog} alt="" />
         </div>
 
         <div className={classes.Content}>
           <h4 className={classes.Title}>
-            In addition, you can make a donation
+            In addition, you <br /> can make a donation
           </h4>
 
           <div className={classes.CreditCardContainer}>
@@ -23,7 +23,7 @@ const Addition = () => {
             </div>
 
             <div className={classes.CreditCardContent}>
-              <img src={CreditCard} alt="" />
+              <img className={classes.ImageCard} src={CreditCard} alt="" />
               <h4 className={classes.CreditCard}>8380 2880 8028 8791 7435</h4>
             </div>
           </div>
@@ -33,7 +33,7 @@ const Addition = () => {
               Legal information and lorem ipsum dolor sit amet, consectetur
               adipiscing elit. Maecenas a ipsum at libero sagittis dignissim sed
               ac diam. Praesent ultrices maximus tortor et vulputate. Interdum
-              et malesuada fames ac ante ipsum primis in faucibus.{" "}
+              et malesuada fames ac ante ipsum primis in faucibus.
             </p>
           </div>
         </div>

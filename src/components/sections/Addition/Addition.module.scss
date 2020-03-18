@@ -1,0 +1,109 @@
+@import "../../../sass/title";
+@import "../../../sass/vars";
+@import "../../../sass/functions";
+
+.Addition {
+  border: red solid;
+
+  display: flex;
+  padding: 80px 20px;
+
+  .Container {
+    width: 100%;
+    max-width: 1040px;
+
+    display: flex;
+    align-items: flex-end;
+    margin: auto;
+
+    .ImageContainer {
+      width: 100%;
+      max-width: 580px;
+
+      position: relative;
+
+      margin-right: 70px;
+
+      .Image {
+        width: 100%;
+
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+      }
+    }
+
+    .Content {
+      width: 100%;
+      max-width: 380px;
+
+      text-align: left;
+
+      .Title {
+        margin-bottom: 30px;
+
+        @extend %title;
+      }
+
+      .CreditCardContainer {
+        .CreditCardTitle {
+          margin-bottom: 10px;
+
+          color: $gray;
+
+          font-size: 15px;
+
+          @media ($laptop-L) {
+            font-size: calcFluidFontSize(10, 13);
+          }
+        }
+
+        .CreditCardContent {
+          width: 315px;
+
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 12px;
+          border-radius: 10px;
+          margin-bottom: 30px;
+
+          background-color: $orange-light;
+
+          @media ($laptop-L) {
+            width: 225px;
+
+            padding: 10px;
+          }
+
+          .ImageCard {
+            width: 40px;
+
+            @media ($laptop-L) {
+              width: 30px;
+            }
+          }
+
+          .CreditCard {
+            color: $black;
+            font-size: 20px;
+
+            @media ($laptop-L) {
+              font-size: 14px;
+            }
+          }
+        }
+      }
+
+      .Text {
+        color: #b2b2b2;
+
+        font-size: 12px;
+
+        @media ($laptop-L) {
+          font-size: calcFluidFontSize(10, 12);
+        }
+      }
+    }
+  }
+}
