@@ -1,3 +1,5 @@
+@import "../../../sass/vars";
+
 .Footer {
   height: 355px;
 
@@ -26,6 +28,10 @@
     opacity: 0.1;
   }
 
+  @media ($laptop-L) {
+    height: 280px;
+  }
+
   .Container {
     width: 100%;
     max-width: 1200px;
@@ -39,13 +45,25 @@
 
     z-index: 2;
 
+    @media ($laptop-L) {
+      max-width: 1000px;
+
+      justify-content: space-around;
+    }
+
     .ImageContainer {
       width: 284px;
       position: relative;
 
       align-self: flex-end;
 
+      @media ($laptop-L) {
+        width: 240px;
+      }
+
       .Image {
+        width: 100%;
+
         position: absolute;
         bottom: 0;
         right: 0;

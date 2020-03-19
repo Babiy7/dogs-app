@@ -1,5 +1,6 @@
 @import "../../sass/title";
 @import "../../sass/vars";
+@import "../../sass/functions";
 
 .FooterContent {
   width: 310px;
@@ -30,6 +31,10 @@
       color: $orange-light;
 
       font-size: 15px;
+
+      @media ($laptop-L) {
+        font-size: calcFluidFontSize(10, 13);
+      }
     }
   }
 }
