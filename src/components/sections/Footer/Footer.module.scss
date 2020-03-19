@@ -79,6 +79,10 @@
         display: none;
       }
 
+      @media ($mobile-M-h) and ($mobile-M-land-X) {
+        display: none;
+      }
+
       .Image {
         width: 100%;
 
