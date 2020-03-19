@@ -13,12 +13,8 @@
   box-sizing: border-box;
   z-index: 3;
 
-  @media ($tablet) {
-    top: 10px;
-  }
-
-  @media ($mobile-L) {
-    top: 0;
+  @media ($laptop-L) {
+    top: 0px;
   }
 
   @media ($mobile-M-h) and ($mobile-M-land-X) {
