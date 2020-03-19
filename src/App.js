@@ -7,6 +7,7 @@ import About from "./components/Sections/About/About";
 import Friends from "./components/Sections/Friends/Friends";
 import Categories from "./components/Sections/Categories/Categories";
 import Addition from "./components/Sections/Addition/Addition";
+import Footer from "./components/Sections/Footer/Footer";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
       <Friends />
       <Categories />
       <Addition />
-      <button className={classes.Button}>My button</button>
+      <Footer />
     </div>
   );
 }

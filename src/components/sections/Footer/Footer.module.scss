@@ -1,0 +1,55 @@
+.Footer {
+  height: 355px;
+
+  position: relative;
+
+  display: flex;
+  padding: 0 20px;
+
+  background: linear-gradient(-45deg, #1b1b1d, #1b1b1d, #453931, #453931);
+
+  z-index: 0;
+
+  &::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-image: url("../../../assests/images/wood-background.jpg");
+
+    z-index: 1;
+    opacity: 0.1;
+  }
+
+  .Container {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+
+    z-index: 2;
+
+    .ImageContainer {
+      width: 284px;
+      position: relative;
+
+      align-self: flex-end;
+
+      .Image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}

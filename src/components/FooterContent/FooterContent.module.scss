@@ -1,0 +1,35 @@
+@import "../../sass/title";
+@import "../../sass/vars";
+
+.FooterContent {
+  width: 310px;
+
+  text-align: left;
+
+  .Title {
+    margin-bottom: 35px;
+
+    color: $white;
+
+    @extend %title;
+  }
+
+  .Item {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    .Icon {
+      margin: auto;
+    }
+
+    .Text {
+      margin-left: 10px;
+
+      color: $orange-light;
+
+      font-size: 15px;
+    }
+  }
+}
