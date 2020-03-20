@@ -11,7 +11,7 @@ import Footer from "./components/Sections/Footer/Footer";
 import Modal from "./components/UI/Modal/Modal";
 
 function App() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   return (
     <div className={classes.App}>

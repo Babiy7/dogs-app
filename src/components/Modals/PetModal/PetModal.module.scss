@@ -1,0 +1,87 @@
+@import "../../../sass/title";
+@import "../../../sass/text";
+@import "../../../sass/vars";
+
+.PetModal {
+  height: 470px;
+
+  display: flex;
+
+  text-align: left;
+
+  .Left {
+    width: 470px;
+
+    border-radius: 15px 0 0 15px;
+
+    background-color: rgba(#000000, 0.5);
+
+    overflow: hidden;
+
+    .Image {
+      width: 100%;
+    }
+  }
+
+  .Right {
+    width: 500px;
+
+    padding: 60px;
+
+    box-sizing: border-box;
+
+    .Title {
+      @extend %title;
+    }
+
+    .SubTitle {
+      color: $gray;
+
+      font-size: 17px;
+    }
+
+    .Text {
+      margin-top: 30px;
+
+      color: $gray;
+
+      @extend %text;
+    }
+
+    .Сharacteristic {
+      margin-top: 25px;
+
+      color: $gray;
+
+      .Item {
+        font-size: 15px;
+
+        list-style-position: inside;
+        list-style: none;
+
+        &::before {
+          content: "\2022";
+
+          display: inline-block;
+          margin-right: 7px;
+
+          color: $orange-light;
+
+          font-size: 1.2em;
+        }
+      }
+
+      .Key {
+        display: inline-block;
+        margin-right: 5px;
+
+        font-size: 17px;
+        font-weight: bold;
+
+        &:first-letter {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

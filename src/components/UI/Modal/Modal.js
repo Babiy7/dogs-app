@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./Modal.module.scss";
 
 import Backdrop from "../Backdrop/Backdrop";
+import PetModal from "../../Modals/PetModal/PetModal";
 
 const Modal = props => {
   const show = props.show;
@@ -17,6 +18,7 @@ const Modal = props => {
         }}
         className={classes.Modal}
       >
+        <PetModal />
         <button onClick={unShow} className={classes.Button} />
       </div>
     </>
