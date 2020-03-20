@@ -1,20 +1,23 @@
 import React from "react";
 import classes from "./Modal.module.scss";
 
+import Backdrop from "../Backdrop/Backdrop";
+
 const Modal = props => {
+  const show = props.show;
+  const unShow = props.unShow;
+
   return (
     <>
+      <Backdrop show={show} unShow={unShow} />
       <div
         style={{
-          // transform: props.show
-          //   ? "translate(-50%, -50%)"
-          //   : "translate(-50%, -100vh)",
-          opacity: props.show ? "1" : "0",
-          zIndex: props.show ? "20" : "-1"
+          opacity: show ? "1" : "0",
+          zIndex: show ? "20" : "-1"
         }}
         className={classes.Modal}
       >
-        <button onClick={props.unShow} className={classes.Button} />
+        <button onClick={unShow} className={classes.Button} />
       </div>
     </>
   );
