@@ -1,0 +1,38 @@
+@import "../../../sass/vars";
+
+.Modal {
+  width: 600px;
+  height: 300px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  background: $orange-light;
+
+  transition: all 1s ease-in-out;
+  transform: translate(-50%, -50%);
+
+  .Button {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+
+    padding: 17px;
+    border: 1px $orange-light solid;
+    border-radius: 50%;
+    outline: none;
+
+    background: none no-repeat center;
+    background-image: url("../../../assests/icons/close.svg");
+    background-size: 15px 15px;
+
+    transition: all 0.4s linear;
+
+    &:hover {
+      background-color: rgba($orange-light, 0.2);
+
+      transform: rotate(90deg);
+    }
+  }
+}
