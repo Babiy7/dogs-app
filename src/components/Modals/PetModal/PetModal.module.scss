@@ -1,16 +1,23 @@
 @import "../../../sass/title";
 @import "../../../sass/text";
 @import "../../../sass/vars";
+@import "../../../sass/functions";
 
 .PetModal {
+  width: 970px;
   height: 470px;
 
   display: flex;
 
   text-align: left;
 
+  @media screen and ($laptop-L) {
+    width: 870px;
+    height: 400px;
+  }
+
   .Left {
-    width: 470px;
+    width: 48.45%;
 
     border-radius: 15px 0 0 15px;
 
@@ -24,11 +31,15 @@
   }
 
   .Right {
-    width: 500px;
+    width: 51.55%;
 
     padding: 60px;
 
     box-sizing: border-box;
+
+    @media screen and ($laptop-L) {
+      padding: 40px;
+    }
 
     .Title {
       @extend %title;
@@ -38,6 +49,10 @@
       color: $gray;
 
       font-size: 17px;
+
+      @media screen and ($laptop-L) {
+        font-size: calcFluidFontSize(13, 15);
+      }
     }
 
     .Text {
@@ -46,6 +61,10 @@
       color: $gray;
 
       @extend %text;
+
+      @media screen and ($laptop-L) {
+        margin-top: 17px;
+      }
     }
 
     .Сharacteristic {
@@ -69,6 +88,10 @@
 
           font-size: 1.2em;
         }
+
+        @media screen and ($laptop-L) {
+          font-size: 13px;
+        }
       }
 
       .Key {
@@ -80,6 +103,10 @@
 
         &:first-letter {
           text-transform: uppercase;
+        }
+
+        @media screen and ($laptop-L) {
+          font-size: 14px;
         }
       }
     }
