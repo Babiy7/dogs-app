@@ -8,8 +8,6 @@ const Modal = props => {
   const show = props.show;
   const unShow = props.unShow;
 
-  console.log(props.pet);
-
   return (
     <>
       <Backdrop show={show} unShow={unShow} />

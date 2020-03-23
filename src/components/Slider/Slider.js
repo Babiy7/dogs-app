@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classes from "./Slider.module.scss";
 
 import Portfolio from "../Portfolio/Portfolio";
@@ -59,7 +59,6 @@ const Slider = props => {
       }}
     >
       <Portfolio
-        handleClick={props.handleClick}
         image={pet.img}
         name={pet.name}
         shadow={index === center ? true : false}

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./PetModal.module.scss";
 
 import dog from "../../../assests/pets/dog3.png";
+import { Context } from "../../../context/context";
 
 const charcteristic = {
   age: "4 months",
@@ -11,7 +12,8 @@ const charcteristic = {
 };
 
 const PetModal = props => {
-  const pet = props.pet;
+  const context = useContext(Context);
+  const pet = context.pet;
   let content = null;
 
   const pets = Object.entries(charcteristic).map(item => (

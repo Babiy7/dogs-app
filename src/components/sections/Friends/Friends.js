@@ -4,6 +4,7 @@ import classes from "./Friends.module.scss";
 import Button from "../../UI/Button/Button";
 import Slider from "../../Slider/Slider";
 import Modal from "../../UI/Modal/Modal";
+import { Context } from "../../../context/context";
 
 const Friends = props => {
   const [state, setState] = useState({
@@ -12,7 +13,6 @@ const Friends = props => {
   });
 
   function handleClick(pet) {
-    console.log(pet);
     setState({ open: !state.open, pet: pet });
   }
 
@@ -25,7 +25,9 @@ const Friends = props => {
           </h4>
 
           <div className={classes.Content}>
-            <Slider handleClick={handleClick} />
+            <Context.Provider value={{ handleClick: handleClick }}>
+              <Slider />
+            </Context.Provider>
           </div>
 
           <div className={classes.ButtonContainer}>
@@ -33,11 +35,13 @@ const Friends = props => {
           </div>
         </div>
       </div>
-      <Modal
-        pet={state.pet}
-        show={state.open}
-        unShow={() => setState({ open: !state.open })}
-      />
+
+      <Context.Provider value={{ pet: state.pet }}>
+        <Modal
+          show={state.open}
+          unShow={() => setState({ open: !state.open })}
+        />
+      </Context.Provider>
     </>
   );
 };

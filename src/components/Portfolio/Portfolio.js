@@ -1,10 +1,11 @@
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import classes from "./Portfolio.module.scss";
 
 import Button from "../UI/Button/Button";
+import { Context } from "../../context/context";
 
 const Portfolio = props => {
-  console.log(props);
+  const context = useContext(Context);
   return (
     <div
       className={[classes.Portfolio, props.shadow ? classes.Center : ""].join(
@@ -20,7 +21,7 @@ const Portfolio = props => {
           <Button
             type="main"
             clicked={() =>
-              props.handleClick({ name: props.name, img: props.image })
+              context.handleClick({ name: props.name, img: props.image })
             }
           >
             Learn More
