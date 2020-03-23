@@ -23,7 +23,7 @@ const pets = [
   { id: "8hh", img: cat3, name: "Freddie" }
 ];
 
-const Slider = () => {
+const Slider = props => {
   const [x, setX] = useState(0);
   const [center, setCenter] = useState(1);
   // eslint-disable-next-line
@@ -59,6 +59,7 @@ const Slider = () => {
       }}
     >
       <Portfolio
+        handleClick={props.handleClick}
         image={pet.img}
         name={pet.name}
         shadow={index === center ? true : false}

@@ -74,6 +74,13 @@
       overflow: auto;
     }
 
+    @media screen and ($mobile-S) {
+      top: -40px;
+      right: 0px;
+
+      overflow: auto;
+    }
+
     .Title {
       @extend %title;
     }

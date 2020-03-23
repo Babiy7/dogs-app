@@ -8,6 +8,8 @@ const Modal = props => {
   const show = props.show;
   const unShow = props.unShow;
 
+  console.log(props.pet);
+
   return (
     <>
       <Backdrop show={show} unShow={unShow} />
@@ -18,7 +20,7 @@ const Modal = props => {
         }}
         className={classes.Modal}
       >
-        <PetModal />
+        <PetModal pet={props.pet} />
         <button onClick={unShow} className={classes.Button} />
       </div>
     </>

@@ -52,6 +52,10 @@
     width: 85%;
   }
 
+  @media screen and ($mobile-S) {
+    width: 90%;
+  }
+
   .Button {
     position: absolute;
     top: -40px;
@@ -67,6 +71,11 @@
     background-size: 15px 15px;
 
     transition: all 0.4s linear;
+
+    @media screen and ($mobile-S) {
+      top: -40px;
+      right: 0px;
+    }
 
     &:hover {
       background-color: rgba($orange-light, 0.2);

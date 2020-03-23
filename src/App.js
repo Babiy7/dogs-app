@@ -21,7 +21,7 @@ function App() {
       <Categories />
       <Addition />
       <Footer />
-      <Modal show={open} unShow={() => setOpen(!open)} />
+
       <button
         onClick={() => setOpen(!open)}
         style={{ position: "absolute", top: "0", left: "0", zIndex: "20" }}
