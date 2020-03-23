@@ -5,7 +5,8 @@ const FooterContent = props => {
   return (
     <div className={classes.FooterContent}>
       <h4 className={classes.Title}>{props.title}</h4>
-      <div>
+
+      <div className={classes.Items}>
         {props.items.map(item => (
           <div className={classes.Item}>
             <div style={{ display: "flex" }}>

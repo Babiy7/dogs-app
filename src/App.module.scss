@@ -4,4 +4,57 @@
   position: relative;
 
   text-align: center;
+
+  .Grid {
+    display: flex;
+
+    .Container {
+      border: red solid;
+      width: 100%;
+      max-width: 1200px;
+      height: 100%;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: minmax(200px, auto);
+      gap: 1em;
+      margin: auto;
+
+      @media screen and (max-width: 600px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 400px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .Item {
+        width: 200px;
+
+        justify-self: center;
+
+        background-color: rgba($color: green, $alpha: 0.5);
+
+        @media screen and (max-width: 600px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.Container div {
+  background-color: rgba($color: red, $alpha: 0.5);
+}
+
+.Item:nth-child(1) {
+}
+
+.Item:nth-child(2) {
+}
+
+.Item:nth-child(3) {
+}
+
+.Item:nth-child(4) {
 }

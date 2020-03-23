@@ -11,8 +11,7 @@ import Footer from "./components/Sections/Footer/Footer";
 import Modal from "./components/UI/Modal/Modal";
 
 function App() {
-  const [open, setOpen] = useState(true);
-
+  const [open, setOpen] = useState(false);
   return (
     <div className={classes.App}>
       <Header />
@@ -29,6 +28,22 @@ function App() {
       >
         click
       </button>
+
+      <div className={classes.Grid}>
+        <div className={classes.Container}>
+          <div className={classes.Item}>Item 1</div>
+
+          <div className={classes.Item}>Item 2</div>
+
+          <div className={classes.Item}>Item 3</div>
+
+          {/* <div className={classes.Item}>Item 4</div>
+
+          <div className={classes.Item}>Item 5</div>
+
+          <div className={classes.Item}>Item 6</div> */}
+        </div>
+      </div>
     </div>
   );
 }
