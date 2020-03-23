@@ -48,6 +48,10 @@
     height: 280px;
   }
 
+  @media screen and ($mobile-M-h) and ($mobile-M-land) {
+    width: 85%;
+  }
+
   .Button {
     position: absolute;
     top: -40px;
