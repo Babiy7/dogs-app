@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import classes from "./Slider.module.scss";
 
 import Portfolio from "../Portfolio/Portfolio";
@@ -23,7 +23,9 @@ const pets = [
   { id: "8hh", img: cat3, name: "Freddie" }
 ];
 
-const Slider = () => {
+const Slider = props => {
+  console.log("rendering Slider");
+
   const [x, setX] = useState(0);
   const [center, setCenter] = useState(1);
   // eslint-disable-next-line
@@ -62,6 +64,7 @@ const Slider = () => {
         image={pet.img}
         name={pet.name}
         shadow={index === center ? true : false}
+        handleClick={props.handleClick}
       />
     </div>
   ));

@@ -8,6 +8,7 @@ import Friends from "./components/Sections/Friends/Friends";
 import Categories from "./components/Sections/Categories/Categories";
 import Addition from "./components/Sections/Addition/Addition";
 import Footer from "./components/Sections/Footer/Footer";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
   return (
@@ -19,6 +20,22 @@ function App() {
       <Categories />
       <Addition />
       <Footer />
+
+      <div className={classes.Grid}>
+        <div className={classes.Container}>
+          <div className={classes.Item}>Item 1</div>
+
+          <div className={classes.Item}>Item 2</div>
+
+          <div className={classes.Item}>Item 3</div>
+
+          {/* <div className={classes.Item}>Item 4</div>
+
+          <div className={classes.Item}>Item 5</div>
+
+          <div className={classes.Item}>Item 6</div> */}
+        </div>
+      </div>
     </div>
   );
 }

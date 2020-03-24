@@ -1,14 +1,14 @@
-import React from "react";
+import React, { memo } from "react";
 import classes from "./Portfolio.module.scss";
 
 import Button from "../UI/Button/Button";
 
 const Portfolio = props => {
+  console.log("rendering Portfolio");
+
   return (
     <div
-      className={[classes.Portfolio, props.shadow ? classes.Center : ""].join(
-        " "
-      )}
+      className={[classes.Portfolio, !props.shadow || classes.Center].join(" ")}
     >
       <img className={classes.Image} src={props.image} alt="pet" />
 
@@ -16,11 +16,22 @@ const Portfolio = props => {
         <h4 className={classes.Title}>{props.name}</h4>
 
         <div className={classes.ButtonContainer}>
-          <Button type="main">Learn More</Button>
+          <Button
+            type="main"
+            clicked={() =>
+              props.handleClick({ name: props.name, img: props.image })
+            }
+          >
+            Learn More
+          </Button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Portfolio;
+function areEqual(prevProps, nextProps) {
+  return prevProps.name === nextProps.name;
+}
+
+export default memo(Portfolio, areEqual);
