@@ -8,6 +8,7 @@ import Friends from "./components/Sections/Friends/Friends";
 import Categories from "./components/Sections/Categories/Categories";
 import Addition from "./components/Sections/Addition/Addition";
 import Footer from "./components/Sections/Footer/Footer";
+import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
   return (

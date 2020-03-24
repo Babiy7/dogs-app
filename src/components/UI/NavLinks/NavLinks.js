@@ -8,8 +8,8 @@ const NavLinks = props => {
     { title: "Our pets", link: "/pets", active: false },
     { title: "To help the shelter", link: "/page", active: false },
     { title: "Contacts", link: "/pats", active: false }
-  ].map(navLink => (
-    <NavLink link={navLink.link} active={navLink.active}>
+  ].map((navLink, index) => (
+    <NavLink key={index} link={navLink.link} active={navLink.active}>
       {navLink.title}
     </NavLink>
   ));

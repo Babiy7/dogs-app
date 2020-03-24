@@ -12,12 +12,14 @@ const charcteristic = {
 };
 
 const PetModal = props => {
+  console.log("rendering PetModal");
+
   const context = useContext(Context);
   const pet = context.pet;
   let content = null;
 
-  const pets = Object.entries(charcteristic).map(item => (
-    <li className={classes.Item}>
+  const pets = Object.entries(charcteristic).map((item, index) => (
+    <li key={index} className={classes.Item}>
       <span className={classes.Key}>{item[0]}: </span> {item[1]}
     </li>
   ));

@@ -30,7 +30,11 @@ const contents = [
 
 const Footer = () => {
   let content = contents.map(content => (
-    <FooterContent title={content.title} items={content.items} />
+    <FooterContent
+      key={content.title}
+      title={content.title}
+      items={content.items}
+    />
   ));
 
   return (

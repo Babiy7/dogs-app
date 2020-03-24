@@ -1,16 +1,14 @@
-import React, { memo, useContext } from "react";
+import React, { memo } from "react";
 import classes from "./Portfolio.module.scss";
 
 import Button from "../UI/Button/Button";
-import { Context } from "../../context/context";
 
 const Portfolio = props => {
-  const context = useContext(Context);
+  console.log("rendering Portfolio");
+
   return (
     <div
-      className={[classes.Portfolio, props.shadow ? classes.Center : ""].join(
-        " "
-      )}
+      className={[classes.Portfolio, !props.shadow || classes.Center].join(" ")}
     >
       <img className={classes.Image} src={props.image} alt="pet" />
 
@@ -21,7 +19,7 @@ const Portfolio = props => {
           <Button
             type="main"
             clicked={() =>
-              context.handleClick({ name: props.name, img: props.image })
+              props.handleClick({ name: props.name, img: props.image })
             }
           >
             Learn More
@@ -32,4 +30,8 @@ const Portfolio = props => {
   );
 };
 
-export default memo(Portfolio);
+function areEqual(prevProps, nextProps) {
+  return prevProps.name === nextProps.name;
+}
+
+export default memo(Portfolio, areEqual);

@@ -7,8 +7,8 @@ const FooterContent = props => {
       <h4 className={classes.Title}>{props.title}</h4>
 
       <div className={classes.Items}>
-        {props.items.map(item => (
-          <div className={classes.Item}>
+        {props.items.map((item, index) => (
+          <div key={index} className={classes.Item}>
             <div style={{ display: "flex" }}>
               <img className={classes.Icon} src={item.icon} alt="" />
             </div>

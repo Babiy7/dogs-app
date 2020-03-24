@@ -7,6 +7,8 @@ import Modal from "../../UI/Modal/Modal";
 import { Context } from "../../../context/context";
 
 const Friends = props => {
+  console.log("rendering Friends");
+
   const [state, setState] = useState({
     open: false,
     pet: null
@@ -25,9 +27,7 @@ const Friends = props => {
           </h4>
 
           <div className={classes.Content}>
-            <Context.Provider value={{ handleClick: handleClick }}>
-              <Slider />
-            </Context.Provider>
+            <Slider handleClick={handleClick} />
           </div>
 
           <div className={classes.ButtonContainer}>
