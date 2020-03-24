@@ -10,6 +10,7 @@ const Link = props => {
       className={classes.Link}
       to={props.link}
       activeClassName={classes.ActiveLink}
+      onClick={props.clicked}
     >
       {props.children}
     </NavLink>
