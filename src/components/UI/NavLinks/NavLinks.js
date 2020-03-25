@@ -5,50 +5,40 @@ import { connect } from "react-redux";
 import { WHITE_THEME, DARK_THEME } from "../../../redux/actionTypes";
 
 const NavLinks = props => {
-  const theme = { type: DARK_THEME };
-  // [
-  //   { title: "Home", link: "/", active: true },
-  //   { title: "About the shelter", link: "/about", active: true },
-  //   {
-  //     title: "Our pets",
-  //     link: "/pets",
-  //     active: false,
-  //     changeTheme: () => {
-  //       console.log("change");
-  //       props.changeTheme();
-  //     }
-  //   },
-  //   { title: "To help the shelter", link: "/page", active: false },
-  //   { title: "Contacts", link: "/pats", active: false }
-  // ].map((navLink, index) => (
-  //   <NavLink
-  //     key={index}
-  //     link={navLink.link}
-  //     active={navLink.active}
-  //     changeTheme={() => navLink.changeTheme()}
-  //   >
-  //     {navLink.title}
-  //   </NavLink>
-  // ));
+  const action = { type: DARK_THEME };
+  const theme = props.theme;
 
   return (
     <>
-      <NavLink link="/" active={true} clicked={() => props.changeTheme(theme)}>
+      <NavLink
+        link="/"
+        theme={theme}
+        active={true}
+        clicked={() => props.changeTheme(action)}
+      >
         Home
       </NavLink>
       <NavLink
         link="/pets"
+        theme={theme}
         clicked={() => props.changeTheme({ type: WHITE_THEME })}
       >
         Our pets
       </NavLink>
-      <NavLink link="/page" clicked={() => props.changeTheme(theme)}>
+      <NavLink
+        link="/page"
+        theme={theme}
+        clicked={() => props.changeTheme(action)}
+      >
         To help the shelter
       </NavLink>
-      <NavLink link="/pats" clicked={() => props.changeTheme(theme)}>
+      <NavLink
+        link="/pats"
+        theme={theme}
+        clicked={() => props.changeTheme(action)}
+      >
         Contacts
       </NavLink>
-      ;
     </>
   );
 };

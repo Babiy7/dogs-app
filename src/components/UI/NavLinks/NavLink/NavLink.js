@@ -7,7 +7,10 @@ const Link = props => {
   return (
     <NavLink
       exact={props.active ? true : false}
-      className={classes.Link}
+      className={[
+        classes.Link,
+        props.theme === "white" ? classes.Dark : ""
+      ].join(" ")}
       to={props.link}
       activeClassName={classes.ActiveLink}
       onClick={props.clicked}

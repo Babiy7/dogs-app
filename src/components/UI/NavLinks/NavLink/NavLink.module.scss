@@ -9,6 +9,10 @@
   }
 }
 
+.Dark {
+  color: $gray;
+}
+
 .ActiveLink {
   @extend %nav_link;
 

@@ -13,6 +13,10 @@
     font-size: calcFluidFontSize(20, 27);
   }
 
+  .TitleDark {
+    color: $gray;
+  }
+
   .Subtitle {
     margin-top: 5px;
 
@@ -24,5 +28,9 @@
     @media ($mobile-L) {
       margin-top: 0;
     }
+  }
+
+  .SubtitleDark {
+    color: black;
   }
 }
