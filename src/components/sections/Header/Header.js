@@ -8,7 +8,6 @@ import Links from "../../UI/NavLinks/NavLinks";
 import BurgerButton from "../../UI/BurgerButton/BurgerButton";
 
 const Header = props => {
-  console.log(props.theme);
   return (
     <div
       className={[

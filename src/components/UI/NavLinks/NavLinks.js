@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { WHITE_THEME, DARK_THEME } from "../../../redux/actionTypes";
 
 const NavLinks = props => {
-  const action = { type: DARK_THEME };
+  const action = { type: WHITE_THEME };
   const theme = props.theme;
 
   return (
@@ -14,26 +14,26 @@ const NavLinks = props => {
         link="/"
         theme={theme}
         active={true}
-        clicked={() => props.changeTheme(action)}
+        clicked={() => props.changeTheme({ type: DARK_THEME })}
       >
         Home
       </NavLink>
       <NavLink
         link="/pets"
         theme={theme}
-        clicked={() => props.changeTheme({ type: WHITE_THEME })}
+        clicked={() => props.changeTheme(action)}
       >
         Our pets
       </NavLink>
       <NavLink
-        link="/page"
+        link="/shelter"
         theme={theme}
         clicked={() => props.changeTheme(action)}
       >
         To help the shelter
       </NavLink>
       <NavLink
-        link="/pats"
+        link="/contacts"
         theme={theme}
         clicked={() => props.changeTheme(action)}
       >

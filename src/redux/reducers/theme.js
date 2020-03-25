@@ -13,7 +13,6 @@ const darkTheme = payload => {
 };
 
 export function themeReducer(state = initState, action) {
-  console.log(action);
   if (action.type === WHITE_THEME) {
     return whiteTheme("white");
   } else {

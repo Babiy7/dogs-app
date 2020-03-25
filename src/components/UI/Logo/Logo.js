@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 
 const Logo = props => {
   const theme = props.theme;
-  console.log(theme);
 
   return (
     <div className={classes.Logo}>

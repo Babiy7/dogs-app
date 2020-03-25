@@ -24,8 +24,6 @@ const pets = [
 ];
 
 const Slider = props => {
-  console.log("rendering Slider");
-
   const [x, setX] = useState(0);
   const [center, setCenter] = useState(1);
   // eslint-disable-next-line

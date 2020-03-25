@@ -1,24 +1,36 @@
 import React from "react";
 import classes from "./App.module.scss";
 
+import { Route, Switch } from "react-router-dom";
+
 import Header from "./components/Sections/Header/Header";
-import Intro from "./components/Sections/Intro/Intro";
-import About from "./components/Sections/About/About";
-import Friends from "./components/Sections/Friends/Friends";
+import Sections from "./components/Sections/Sections";
+import Pets from "./components/Sections/Pets/Pets";
 import Categories from "./components/Sections/Categories/Categories";
-import Addition from "./components/Sections/Addition/Addition";
 import Footer from "./components/Sections/Footer/Footer";
-import Portfolio from "./components/Portfolio/Portfolio";
 
 function App() {
+  let Padding = props => (
+    <div style={{ paddingTop: `${props.padding}px` }}></div>
+  );
+
   return (
     <div className={classes.App}>
       <Header />
-      <Intro />
-      <About />
-      <Friends />
-      <Categories />
-      <Addition />
+      <Switch>
+        <Route path="/" exact render={() => <Sections />} />
+        <Route path="/pets" render={() => <Pets />} />
+        <Route
+          path="/shelter"
+          render={() => (
+            <>
+              <Padding padding={50} />
+              <Categories />
+            </>
+          )}
+        />
+        <Route path="/contacts" render={() => <Padding padding={120} />} />
+      </Switch>
       <Footer />
 
       <div className={classes.Grid}>
