@@ -1,4 +1,5 @@
 @import "../../sass/vars";
+@import "../../sass/title";
 
 .Pagination {
   height: auto;
@@ -9,11 +10,22 @@
   background: $white;
 
   .Container {
-    border: red solid;
     width: 100%;
     max-width: 1180px;
 
     margin: auto;
+
+    .TextContainer {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px;
+
+      .Title {
+        width: 450px;
+
+        @extend %title;
+      }
+    }
 
     .Portfolios {
       display: grid;

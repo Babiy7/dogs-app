@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import classes from "./Pagination.module.scss";
 
-import Portfolio from "../Portfolio/Portfolio";
-import PaginationButtons from "../UI/PaginationButtons/PaginationButtons";
+import Portfolio from "../../components/Portfolio/Portfolio";
+import PaginationButtons from "../../components/UI/PaginationButtons/PaginationButtons";
 
 import dog1 from "../../assests/pets/dog1.png";
 import dog2 from "../../assests/pets/dog2.png";
@@ -66,10 +66,11 @@ const pets = [
   { id: "6sr", img: cat1, name: "Charly" },
   { id: "7gh", img: cat2, name: "Scarlett" },
   { id: "8hh", img: cat3, name: "Freddie" },
-  { id: "6sr", img: cat1, name: "Charly" },
-  { id: "7gh", img: cat2, name: "Scarlett" },
-  { id: "8hh", img: cat3, name: "Freddie" }
+  { id: "6sr", img: cat1, name: "Charly" }
 ];
+
+const Portfolios = ({ pets }) =>
+  pets.map((pet, i) => <Portfolio key={i} image={pet.img} name={pet.name} />);
 
 const Pagination = props => {
   const [currentPage, setCurrentPage] = useState(1);
@@ -86,12 +87,6 @@ const Pagination = props => {
   //Get portfolios for page
   const petsPerPage = pets.slice(indexOfFirstPortfolios, indexOfLastPortfolios);
 
-  console.log(indexOfFirstPortfolios, indexOfLastPortfolios);
-
-  const portfolios = petsPerPage.map((pet, i) => {
-    return <Portfolio key={i} image={pet.img} name={pet.name} />;
-  });
-
   const paginate = number => {
     setCurrentPage(number);
   };
@@ -99,10 +94,22 @@ const Pagination = props => {
   return (
     <section className={classes.Pagination}>
       <div className={classes.Container}>
-        <div className={classes.Portfolios}>{portfolios}</div>
+        <div className={classes.TextContainer}>
+          <h4 className={classes.Title}>
+            Our friends who are looking for a house
+          </h4>
+        </div>
+
+        <div className={classes.Portfolios}>
+          <Portfolios pets={petsPerPage} />
+        </div>
 
         <div className={classes.Buttons}>
-          <PaginationButtons amountOf={indexOfButtons} paginate={paginate} />
+          <PaginationButtons
+            amountOf={indexOfButtons}
+            paginate={paginate}
+            currentPage={currentPage}
+          />
         </div>
       </div>
     </section>

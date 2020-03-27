@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router-dom";
 
 import Header from "./components/Sections/Header/Header";
 import Sections from "./components/Sections/Sections";
-import Pagination from "./components/Pagination/Pagination";
+import Pagination from "./containers/Pagination/Pagination";
 import Categories from "./components/Sections/Categories/Categories";
 import Footer from "./components/Sections/Footer/Footer";
 
