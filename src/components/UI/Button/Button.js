@@ -20,6 +20,11 @@ const Button = props => {
       break;
     }
 
+    case "pagination": {
+      button = classes.SliderButton;
+      break;
+    }
+
     default: {
       button = classes.Button;
     }

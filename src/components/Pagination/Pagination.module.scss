@@ -13,9 +13,18 @@
     width: 100%;
     max-width: 1180px;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.8rem;
     margin: auto;
+
+    .Portfolios {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.8rem;
+    }
+
+    .Buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    }
   }
 }
