@@ -1,0 +1,21 @@
+@import "../../sass/vars";
+
+.Pagination {
+  height: auto;
+
+  display: flex;
+  padding: 150px 1rem 60px 1rem;
+
+  background: $white;
+
+  .Container {
+    border: red solid;
+    width: 100%;
+    max-width: 1180px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.8rem;
+    margin: auto;
+  }
+}

@@ -5,7 +5,7 @@ import { Route, Switch } from "react-router-dom";
 
 import Header from "./components/Sections/Header/Header";
 import Sections from "./components/Sections/Sections";
-import Pets from "./components/Sections/Pets/Pets";
+import Pagination from "./components/Pagination/Pagination";
 import Categories from "./components/Sections/Categories/Categories";
 import Footer from "./components/Sections/Footer/Footer";
 
@@ -19,7 +19,7 @@ function App() {
       <Header />
       <Switch>
         <Route path="/" exact render={() => <Sections />} />
-        <Route path="/pets" render={() => <Pets />} />
+        <Route path="/pets" render={() => <Pagination />} />
         <Route
           path="/shelter"
           render={() => (
