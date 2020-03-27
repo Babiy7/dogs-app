@@ -32,22 +32,6 @@ function App() {
         <Route path="/contacts" render={() => <Padding padding={120} />} />
       </Switch>
       <Footer />
-
-      <div className={classes.Grid}>
-        <div className={classes.Container}>
-          <div className={classes.Item}>Item 1</div>
-
-          <div className={classes.Item}>Item 2</div>
-
-          <div className={classes.Item}>Item 3</div>
-
-          {/* <div className={classes.Item}>Item 4</div>
-
-          <div className={classes.Item}>Item 5</div>
-
-          <div className={classes.Item}>Item 6</div> */}
-        </div>
-      </div>
     </div>
   );
 }
