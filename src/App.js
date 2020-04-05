@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./App.module.scss";
 
 import { Route, Switch } from "react-router-dom";
@@ -10,7 +10,7 @@ import Categories from "./components/Sections/Categories/Categories";
 import Footer from "./components/Sections/Footer/Footer";
 
 function App() {
-  let Padding = props => (
+  let Padding = (props) => (
     <div style={{ paddingTop: `${props.padding}px` }}></div>
   );
 
