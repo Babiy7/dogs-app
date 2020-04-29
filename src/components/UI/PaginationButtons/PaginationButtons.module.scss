@@ -1,3 +1,16 @@
+@import "../../../sass/vars";
+
 .ListButtons {
   display: flex;
+  align-items: center;
+}
+
+.Dot {
+  width: 5px;
+  height: 5px;
+
+  margin: 2px;
+  border-radius: 50%;
+
+  background: $orange-light;
 }

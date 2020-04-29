@@ -66,13 +66,13 @@ const pets = [
   { id: "6sr", img: cat1, name: "Charly" },
   { id: "7gh", img: cat2, name: "Scarlett" },
   { id: "8hh", img: cat3, name: "Freddie" },
-  { id: "6sr", img: cat1, name: "Charly" }
+  { id: "6sr", img: cat1, name: "Charly" },
 ];
 
 const Portfolios = ({ pets }) =>
   pets.map((pet, i) => <Portfolio key={i} image={pet.img} name={pet.name} />);
 
-const Pagination = props => {
+const Pagination = (props) => {
   const [currentPage, setCurrentPage] = useState(1);
   // eslint-disable-next-line no-unused-vars
   const [portfolioPerPage, setPortfolioPerPage] = useState(8);
@@ -87,7 +87,7 @@ const Pagination = props => {
   //Get portfolios for page
   const petsPerPage = pets.slice(indexOfFirstPortfolios, indexOfLastPortfolios);
 
-  const paginate = number => {
+  const paginate = (number) => {
     setCurrentPage(number);
   };
 
