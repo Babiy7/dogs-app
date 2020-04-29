@@ -1,0 +1,209 @@
+@import "../../../sass/vars";
+@import "../../../sass/text";
+@import "../../../sass/functions";
+
+.Intro {
+  height: 880px;
+
+  position: relative;
+
+  display: flex;
+  align-items: flex-end;
+  padding: 0 20px;
+
+  background: linear-gradient(-45deg, #1b1b1d, #1b1b1d, #453931, #453931);
+
+  overflow: hidden;
+  z-index: 1;
+
+  &::before {
+    content: "";
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background: url("../../../assests/images/wood-background.jpg");
+
+    opacity: 0.1;
+  }
+
+  @media ($laptop-L) {
+    height: 650px;
+  }
+
+  @media ($tablet) {
+    height: 600px;
+  }
+
+  @media ($mobile-L) {
+    height: 650px;
+
+    padding: 0 10px;
+    padding-top: 50px;
+    align-items: flex-start;
+  }
+
+  @media ($mobile-L-h) and ($mobile-M-land-X) {
+    height: 550px;
+  }
+
+  .Container {
+    width: 100%;
+    max-width: 1175px;
+    height: 560px;
+
+    display: flex;
+    margin: 0 auto;
+
+    z-index: 3;
+
+    @media ($mobile-L) {
+      height: 100%;
+
+      flex-direction: column;
+    }
+
+    .Left {
+      width: 40%;
+
+      @media ($laptop-L) {
+        padding-top: 100px;
+      }
+
+      @media ($tablet) {
+        padding-top: 150px;
+      }
+
+      @media ($mobile-L) {
+        width: 90%;
+
+        padding-top: 80px;
+        margin: 0 auto;
+
+        text-align: center;
+      }
+
+      @media ($mobile-M-h) and ($mobile-M-land) {
+        padding-top: 200px;
+      }
+
+      @media ($mobile-M-h) and ($mobile-M-land-X) {
+        padding-top: 200px;
+      }
+
+      .Title {
+        width: 350px;
+
+        color: #fffbf8;
+
+        text-align: left;
+        font-size: calcFluidFontSize(25, 44);
+        font-family: "Poppins", sans-serif;
+
+        @media ($laptop-L) {
+          width: 300px;
+        }
+
+        @media ($tablet) {
+          width: 250px;
+        }
+
+        @media ($mobile-L) {
+          width: 100%;
+
+          text-align: center;
+        }
+      }
+
+      .Text {
+        width: 444px;
+
+        margin-top: 45px;
+
+        @extend %text;
+
+        @media ($tablet) {
+          width: 300px;
+        }
+
+        @media ($mobile-L) {
+          width: 100%;
+
+          margin-top: 15px;
+
+          text-align: center;
+          line-height: 20px;
+        }
+
+        @media ($mobile-M-h) and ($mobile-M-land-X) {
+          width: 344px;
+        }
+
+        @media ($mobile-M-h) and ($mobile-M-land) {
+          width: 304px;
+        }
+      }
+
+      .ButtonContainer {
+        margin-top: 45px;
+
+        float: left;
+
+        @media ($mobile-L) {
+          width: 100%;
+
+          margin-top: 20px;
+
+          text-align: center;
+        }
+      }
+    }
+
+    .Right {
+      width: 60%;
+
+      position: relative;
+
+      @media ($mobile-L) {
+        width: 100%;
+        height: 100%;
+      }
+
+      .Image {
+        position: absolute;
+        bottom: 0;
+        right: -370px;
+
+        z-index: -1;
+
+        @media ($laptop-L) {
+          height: 550px;
+
+          right: -100px;
+        }
+
+        @media ($tablet) {
+          height: 450px;
+
+          right: -120px;
+        }
+
+        @media ($mobile-L) {
+          height: 300px;
+
+          right: -50px;
+        }
+
+        @media ($mobile-L-h) and ($mobile-M-land-X) {
+          height: 400px;
+
+          right: -100px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+@import "../../../sass/vars";
+
+.Modal {
+  width: 100%;
+  max-width: 970px;
+  height: 470px;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  border-radius: 15px;
+
+  background: white;
+
+  transition: all 0.4s ease-in-out;
+  transform: translate(-50%, -50%);
+
+  @media screen and ($laptop-L) {
+    max-width: 870px;
+    height: 400px;
+  }
+
+  @media screen and ($tablet) {
+    width: 90%;
+    max-width: 650px;
+    height: 300px;
+  }
+
+  @media screen and ($mobile-L) {
+    width: 80%;
+    max-width: 400px;
+    height: auto;
+
+    flex-direction: column;
+  }
+
+  @media screen and ($mobile-M) {
+    width: 75%;
+    height: 80%;
+
+    flex-direction: column;
+  }
+
+  @media screen and ($mobile-M-h) and ($mobile-M-land-X) {
+    width: 90%;
+    max-width: 650px;
+    height: 280px;
+  }
+
+  @media screen and ($mobile-M-h) and ($mobile-M-land) {
+    width: 85%;
+  }
+
+  @media screen and ($mobile-S) {
+    width: 90%;
+  }
+
+  .Button {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+
+    padding: 17px;
+    border: 1px $orange-light solid;
+    border-radius: 50%;
+    outline: none;
+
+    background: none no-repeat center;
+    background-image: url("../../../assests/icons/close.svg");
+    background-size: 15px 15px;
+
+    transition: all 0.4s linear;
+
+    @media screen and ($mobile-S) {
+      top: -40px;
+      right: 0px;
+    }
+
+    &:hover {
+      background-color: rgba($orange-light, 0.2);
+
+      transform: rotate(90deg);
+      box-shadow: 1px 1px 15px rgba(white, 0.3);
+    }
+  }
+}

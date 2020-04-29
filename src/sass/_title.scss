@@ -1,0 +1,17 @@
+@import "./vars";
+@import "./functions";
+
+%title {
+  color: $gray;
+
+  font-size: 35px;
+  line-height: 1.3em;
+
+  @media ($laptop-L) {
+    font-size: 25px;
+  }
+
+  @media ($mobile-L) {
+    font-size: calcFluidFontSize(20, 22);
+  }
+}

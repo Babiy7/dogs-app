@@ -1,0 +1,11 @@
+@import "./functions";
+@import "./vars";
+
+%text {
+  color: $gray-light;
+
+  text-align: left;
+  line-height: 20px;
+  font-size: calcFluidFontSize(12, 15);
+  font-family: "Lato", serif;
+}

@@ -1,0 +1,24 @@
+@import "../../../../sass/vars";
+@import "../../../../sass/nav_link";
+
+.Link {
+  @extend %nav_link;
+
+  transition: all 0.3s linear;
+
+  &:hover::before {
+    width: 100%;
+  }
+}
+
+.Dark {
+  color: $gray;
+}
+
+.ActiveLink {
+  @extend %nav_link;
+
+  &:before {
+    width: 100%;
+  }
+}

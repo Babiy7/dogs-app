@@ -1,0 +1,38 @@
+@import "../../../sass/vars";
+@import "../../../sass/functions";
+
+.Logo {
+  display: inline-block;
+
+  .Title {
+    padding: 0;
+    margin: 0;
+
+    color: $orange-light;
+
+    font-size: calcFluidFontSize(20, 27);
+
+    transition: all 0.2s linear;
+  }
+
+  .TitleDark {
+    color: $gray;
+  }
+
+  .Subtitle {
+    margin-top: 5px;
+
+    color: $white;
+
+    font-family: "Lato", sans-serif;
+    font-size: calcFluidFontSize(10, 13.5);
+
+    @media ($mobile-L) {
+      margin-top: 0;
+    }
+  }
+
+  .SubtitleDark {
+    color: black;
+  }
+}
