@@ -7,8 +7,6 @@ import Modal from "../../UI/Modal/Modal";
 import { Context } from "../../../context/context";
 
 const Friends = props => {
-  console.log("rendering Friends");
-
   const [state, setState] = useState({
     open: false,
     pet: null

@@ -4,9 +4,15 @@
 .Link {
   @extend %nav_link;
 
+  transition: all 0.3s linear;
+
   &:hover::before {
     width: 100%;
   }
+}
+
+.Dark {
+  color: $gray;
 }
 
 .ActiveLink {

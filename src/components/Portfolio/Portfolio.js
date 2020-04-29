@@ -4,8 +4,6 @@ import classes from "./Portfolio.module.scss";
 import Button from "../UI/Button/Button";
 
 const Portfolio = props => {
-  console.log("rendering Portfolio");
-
   return (
     <div
       className={[classes.Portfolio, !props.shadow || classes.Center].join(" ")}

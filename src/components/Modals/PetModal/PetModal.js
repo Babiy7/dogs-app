@@ -12,8 +12,6 @@ const charcteristic = {
 };
 
 const PetModal = props => {
-  console.log("rendering PetModal");
-
   const context = useContext(Context);
   const pet = context.pet;
   let content = null;

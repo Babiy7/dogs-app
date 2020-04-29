@@ -20,16 +20,18 @@ const pets = [
   { id: "5se", img: dog5, name: "Timmy" },
   { id: "6sr", img: cat1, name: "Charly" },
   { id: "7gh", img: cat2, name: "Scarlett" },
-  { id: "8hh", img: cat3, name: "Freddie" }
+  { id: "8hh", img: cat3, name: "Freddie" },
 ];
 
-const Slider = props => {
-  console.log("rendering Slider");
-
+const Slider = (props) => {
   const [x, setX] = useState(0);
   const [center, setCenter] = useState(1);
   // eslint-disable-next-line
   const [size, setSize] = useState(390);
+
+  // window.onresize = (e) => {
+  //   if (e.target.innerWidth < 775 && e.target.innerWidth > 750) setSize(340);
+  // };
 
   const setLocation = (x, center) => {
     setX(x);
@@ -57,7 +59,7 @@ const Slider = props => {
       className={classes.Slide}
       key={index}
       style={{
-        transform: `translateX(${x}px)`
+        transform: `translateX(${x}px)`,
       }}
     >
       <Portfolio

@@ -1,0 +1,42 @@
+@import "../../sass/vars";
+@import "../../sass/title";
+
+.Pagination {
+  height: auto;
+
+  display: flex;
+  padding: 150px 1rem 60px 1rem;
+
+  background: $white;
+
+  .Container {
+    width: 100%;
+    max-width: 1180px;
+
+    margin: auto;
+
+    .TextContainer {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 60px;
+
+      .Title {
+        width: 450px;
+
+        @extend %title;
+      }
+    }
+
+    .Portfolios {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.8rem;
+    }
+
+    .Buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 60px;
+    }
+  }
+}
