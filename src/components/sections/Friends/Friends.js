@@ -6,10 +6,10 @@ import Slider from "../../Slider/Slider";
 import Modal from "../../UI/Modal/Modal";
 import { Context } from "../../../context/context";
 
-const Friends = props => {
+const Friends = (props) => {
   const [state, setState] = useState({
     open: false,
-    pet: null
+    pet: null,
   });
 
   function handleClick(pet) {

@@ -1,5 +1,9 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import classes from "./Slider.module.scss";
+
+import Slider from "react-slick";
+// import "~slick-carousel/slick/slick.css";
+// import "~slick-carousel/slick/slick-theme.css";
 
 import Portfolio from "../Portfolio/Portfolio";
 import Button from "../UI/Button/Button";
@@ -23,67 +27,57 @@ const pets = [
   { id: "8hh", img: cat3, name: "Freddie" },
 ];
 
-const Slider = (props) => {
-  const [x, setX] = useState(0);
-  const [center, setCenter] = useState(1);
-  // eslint-disable-next-line
-  const [size, setSize] = useState(390);
+class MySlider extends Component {
+  constructor(props) {
+    super(props);
+    this.next = this.next.bind(this);
+    this.previous = this.previous.bind(this);
+  }
 
-  // window.onresize = (e) => {
-  //   if (e.target.innerWidth < 775 && e.target.innerWidth > 750) setSize(340);
-  // };
+  next() {
+    this.slider.slickNext();
+  }
 
-  const setLocation = (x, center) => {
-    setX(x);
-    setCenter(center);
-  };
+  previous() {
+    this.slider.slickPrev();
+  }
 
-  const goLeft = () => {
-    if (0 === x) {
-      setLocation(-size * (pets.length - 3), pets.length - 2);
-    } else {
-      setLocation(x + size, center - 1);
-    }
-  };
-
-  const goRight = () => {
-    if (-size * (pets.length - 3) === x) {
-      setLocation(0, 1);
-    } else {
-      setLocation(x - size, center + 1);
-    }
-  };
-
-  const slides = pets.map((pet, index) => (
-    <div
-      className={classes.Slide}
-      key={index}
-      style={{
-        transform: `translateX(${x}px)`,
-      }}
-    >
-      <Portfolio
-        image={pet.img}
-        name={pet.name}
-        shadow={index === center ? true : false}
-        handleClick={props.handleClick}
-      />
-    </div>
-  ));
-
-  return (
-    <div className={classes.Slider}>
-      <div className={classes.Container}>{slides}</div>
-
-      <div className={classes.Left}>
-        <Button type="previous" clicked={() => goLeft()} />
+  render() {
+    const slides = pets.map((pet, index) => (
+      <div className={classes.Slide} key={index}>
+        <Portfolio
+          image={pet.img}
+          name={pet.name}
+          handleClick={this.props.handleClick}
+        />
       </div>
+    ));
 
-      <div className={classes.Right}>
-        <Button type="next" clicked={() => goRight()} />
+    const settings = {
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+    };
+
+    return (
+      <div className={classes.Slider}>
+        <div className={classes.Container}>
+          <Slider ref={(c) => (this.slider = c)} {...settings}>
+            {slides}
+          </Slider>
+        </div>
+        <div className={classes.Left}>
+          <Button type="previous" clicked={() => this.previous()} />
+        </div>
+
+        <div className={classes.Right}>
+          <Button type="next" clicked={() => this.next()} />
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
-export default Slider;
+export default MySlider;
