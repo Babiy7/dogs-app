@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./Intro.module.scss";
 
 import Button from "../../UI/Button/Button";
-import dog from "../../../assests/images/dog.png";
+import dog from "../../../assests/images/Dog.png";
 
 const Intro = () => {
   return (

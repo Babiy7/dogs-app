@@ -1,0 +1,88 @@
+@import "../../sass/title";
+@import "../../sass/vars";
+@import "../../sass/functions";
+
+.FooterContent {
+  width: 310px;
+
+  text-align: left;
+
+  @media ($tablet) {
+    width: 200px;
+  }
+
+  @media ($mobile-L) {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+
+    text-align: left;
+
+    &:nth-child(1) {
+      margin-bottom: 0px;
+    }
+  }
+
+  .Title {
+    margin-bottom: 35px;
+
+    color: $white;
+
+    @extend %title;
+
+    @media ($tablet) {
+      margin-bottom: 25px;
+
+      font-size: calcFluidFontSize(20, 22);
+    }
+
+    @media ($mobile-L) {
+    }
+  }
+
+  .Items {
+    .Item {
+      height: 30px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+
+      @media ($tablet) {
+        height: 20px;
+
+        margin-bottom: 20px;
+      }
+
+      .Icon {
+        margin: auto;
+
+        @media ($laptop-L) {
+          width: 25px;
+        }
+
+        @media ($tablet) {
+          width: 20px;
+        }
+      }
+
+      .Text {
+        margin-left: 10px;
+
+        color: $orange-light;
+
+        font-size: 15px;
+
+        @media ($laptop-L) {
+          font-size: calcFluidFontSize(11, 13);
+        }
+      }
+    }
+  }
+}

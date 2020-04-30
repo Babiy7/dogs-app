@@ -41,6 +41,7 @@
   width: 50px;
   height: 50px;
 
+  margin: 0.5rem;
   border: 2px solid $orange-light;
   border-radius: 50%;
   outline: none;
@@ -48,6 +49,11 @@
   background: none;
 
   transition: all 0.2s linear;
+
+  @media screen and ($mobile-M) {
+    width: 40px;
+    height: 40px;
+  }
 
   &:hover {
     color: $black;
@@ -63,4 +69,9 @@
 .Next {
   background: url("../../../assests/icons/next.svg") no-repeat center;
   background-size: 20px 20px;
+}
+
+.Hover {
+  color: $black;
+  background-color: $orange-light;
 }

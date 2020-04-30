@@ -5,21 +5,13 @@
   height: 100px;
 
   position: absolute;
-  top: 50px;
+  top: 0;
   left: 0;
 
   padding: 0 20px;
 
   box-sizing: border-box;
   z-index: 3;
-
-  @media ($tablet) {
-    top: 10px;
-  }
-
-  @media ($mobile-L) {
-    top: 0;
-  }
 
   @media ($mobile-M-h) and ($mobile-M-land-X) {
     top: 10px;
@@ -51,4 +43,10 @@
       }
     }
   }
+}
+
+.White {
+  background: white;
+
+  box-shadow: 1px 1px 10px rgba(#000000, 0.1);
 }

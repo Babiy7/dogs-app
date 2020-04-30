@@ -11,6 +11,12 @@
     color: $orange-light;
 
     font-size: calcFluidFontSize(20, 27);
+
+    transition: all 0.2s linear;
+  }
+
+  .TitleDark {
+    color: $gray;
   }
 
   .Subtitle {
@@ -24,5 +30,9 @@
     @media ($mobile-L) {
       margin-top: 0;
     }
+  }
+
+  .SubtitleDark {
+    color: black;
   }
 }

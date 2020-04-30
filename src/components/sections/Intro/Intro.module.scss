@@ -3,7 +3,7 @@
 @import "../../../sass/functions";
 
 .Intro {
-  height: 920px;
+  height: 880px;
 
   position: relative;
 
@@ -20,7 +20,7 @@
     content: "";
 
     width: 100%;
-    height: 920px;
+    height: 100%;
 
     position: absolute;
     top: 0;
@@ -32,55 +32,23 @@
   }
 
   @media ($laptop-L) {
-    height: 750px;
-
-    &::before {
-      height: 750px;
-    }
+    height: 650px;
   }
 
   @media ($tablet) {
     height: 600px;
-
-    &::before {
-      height: 600px;
-    }
   }
 
   @media ($mobile-L) {
-    height: 550px;
+    height: 650px;
 
     padding: 0 10px;
     padding-top: 50px;
     align-items: flex-start;
-
-    &::before {
-      height: 550px;
-    }
   }
 
-  @media ($mobile-M-h) and ($mobile-M-land) {
-    height: 520px;
-
-    &::before {
-      height: 520px;
-    }
-  }
-
-  @media ($mobile-M-h) and ($mobile-M-land-X) {
+  @media ($mobile-L-h) and ($mobile-M-land-X) {
     height: 550px;
-
-    &::before {
-      height: 550px;
-    }
-  }
-
-  @media ($mobile-S-h) and ($mobile-S-land) {
-    height: 500px;
-
-    &::before {
-      height: 500px;
-    }
   }
 
   .Container {
@@ -94,6 +62,8 @@
     z-index: 3;
 
     @media ($mobile-L) {
+      height: 100%;
+
       flex-direction: column;
     }
 
@@ -198,62 +168,40 @@
 
       position: relative;
 
-      .Image {
-        height: 1800px;
+      @media ($mobile-L) {
+        width: 100%;
+        height: 100%;
+      }
 
+      .Image {
         position: absolute;
-        top: -380px;
-        right: -420px;
+        bottom: 0;
+        right: -370px;
 
         z-index: -1;
 
         @media ($laptop-L) {
-          height: 1400px;
+          height: 550px;
 
-          top: -180px;
-          right: -190px;
-        }
-
-        @media ($laptop) {
-          height: 1200px;
-
-          top: -80px;
-          right: -140px;
+          right: -100px;
         }
 
         @media ($tablet) {
-          height: 1000px;
+          height: 450px;
 
-          top: 20px;
-          right: -150px;
+          right: -120px;
         }
 
         @media ($mobile-L) {
-          height: 600px;
+          height: 300px;
 
-          top: -40px;
-          right: -200px;
+          right: -50px;
         }
 
-        @media ($mobile-M-h) and ($mobile-M-land) {
-          height: 850px;
+        @media ($mobile-L-h) and ($mobile-M-land-X) {
+          height: 400px;
 
-          top: 120px;
-          right: -160px;
-        }
-
-        @media ($mobile-M-h) and ($mobile-M-land-X) {
-          height: 950px;
-
-          top: 80px;
-          right: -160px;
-        }
-
-        @media ($mobile-S-h) and ($mobile-S-land) {
-          height: 750px;
-
-          top: 160px;
-          right: -140px;
+          right: -100px;
         }
       }
     }

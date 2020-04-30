@@ -5,7 +5,7 @@ const BurgerButton = props => {
   return (
     <div className={classes.BurgerButton}>
       {[1, 2, 3].map(_ => (
-        <div className={classes.Line} />
+        <div key={_} className={classes.Line} />
       ))}
     </div>
   );

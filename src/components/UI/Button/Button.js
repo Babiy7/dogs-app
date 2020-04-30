@@ -1,10 +1,10 @@
 import React from "react";
 import classes from "./Button.module.scss";
 
-const Button = props => {
+const Button = ({ type, number, children, clicked }) => {
   let button;
 
-  switch (props.type) {
+  switch (type) {
     case "main": {
       button = [classes.Button, classes.Main].join(" ");
       break;
@@ -20,13 +20,18 @@ const Button = props => {
       break;
     }
 
+    case "pagination": {
+      button = [classes.SliderButton, number ? classes.Hover : ""].join(" ");
+      break;
+    }
+
     default: {
       button = classes.Button;
     }
   }
   return (
-    <button className={button} onClick={props.clicked}>
-      {props.children}
+    <button className={button} onClick={clicked}>
+      {children}
     </button>
   );
 };
