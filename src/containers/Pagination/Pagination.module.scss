@@ -2,6 +2,7 @@
 @import "../../sass/title";
 
 .Pagination {
+  border: red solid;
   height: auto;
 
   display: flex;
@@ -10,6 +11,7 @@
   background: $white;
 
   .Container {
+    border: green solid;
     width: 100%;
     max-width: 1180px;
 
@@ -28,9 +30,10 @@
     }
 
     .Portfolios {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1.8rem;
+      border: red solid;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
 
     .Buttons {
